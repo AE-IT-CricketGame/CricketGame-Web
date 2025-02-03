@@ -179,9 +179,7 @@ export const previouseWinners = [
   "0774575318",
   "94774575318",
   "0777619064",
-  "94777619064",
-  "94712946950",
-  "0712946950"
+  "94777619064"
 ];
 
 export const blockedNumbers = [
