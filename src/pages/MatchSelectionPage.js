@@ -61,7 +61,7 @@ const MatchSelectionPage = () => {
   const [leaderboardVisible, setLeaderboardVisible] = useState(false);
   const [allMatches, setAllMatches] = useState([]);
   const [winner, setWinner] = useState(false);
-  const [blocked, setBlocked] = useState(false)
+  const [blocked, setBlocked] = useState(false);
   const [currentLeaderBoard, setCurrentLeaderBoard] = useState(null);
 
   // useEffect(() => {
@@ -91,7 +91,9 @@ const MatchSelectionPage = () => {
       previouseWinners.includes(localStorage.getItem("mycricq-mobile"))
     );
 
-    setBlocked(previouseWinners.includes(localStorage.getItem("mycricq-mobile")))
+    setBlocked(
+      previouseWinners.includes(localStorage.getItem("mycricq-mobile"))
+    );
 
     // getPreviouseWinners().then((res) => {
     //   setWinner(
@@ -202,11 +204,10 @@ const MatchSelectionPage = () => {
   const rulesGenerator = (rules) => {
     if (blocked) {
       return `<div style="text-align:center"> ${STRINGS.BLOCKED_MESSAGE[LANGUAGE_ID]}</div>`;
-    }
-    else if (winner) {
+    } else if (winner) {
       return `<div style="text-align:center"> ${STRINGS.WINNER_MESSAGE[LANGUAGE_ID]}</div>`;
     }
-    
+
     if (rules?.length == 0) return "";
     let html = `<div style="text-align:left">Rules: <ul>`;
     rules.forEach((element) => {
@@ -679,10 +680,15 @@ const MatchSelectionPage = () => {
               fontSize: "0.8em",
               padding: 0,
               margin: 3,
-              display: "flex",
+              display: "block",
               justifyContent: "center",
             }}
           >
+            <span style={{ fontStyle: "italic", color: "#192130", fontSize: '0.8em' }}>
+              * To unsubscribe from the game, <br/>please click the below
+              profile button.
+            </span><br/>
+           
             <span style={{ paddingTop: "5px", color: "#192130" }}>
               Logged In As:{" "}
             </span>
