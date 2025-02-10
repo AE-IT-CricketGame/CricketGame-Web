@@ -639,7 +639,7 @@ const MatchSelectionPage = () => {
                             />
                           ) : null}
                         </ThemeProvider>
-                        <ThemeProvider theme={theme}>
+                        {/* <ThemeProvider theme={theme}>
                           {checkSubscribedLeaderboard(
                             match.attributes.leaderboards.data
                           ) ? (
@@ -660,7 +660,7 @@ const MatchSelectionPage = () => {
                               label="Unsbscribe"
                             />
                           ) : null}
-                        </ThemeProvider>
+                        </ThemeProvider> */}
                       </Typography>
                       {/* <Typography variant="body2" >
                                                         Time Period : {match.startTime} - {match.endTime}
