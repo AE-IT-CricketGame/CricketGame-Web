@@ -26,9 +26,9 @@ const userSubscribe = async (userId, mobile, campaignId, status, matchName) => {
     }
 }
 
-const userUnsubscribeFromApp = async (mobile, serverRef) => {
+const userUnsubscribeFromApp = async (mobile, serverRef, tag) => {
 
-    const data = { mobile, serverRef }
+    const data = { mobile, serverRef,tag }
 
     try {
     const response = await axios.post(API_PATHS.USER_UNSUBSCRIBE_FROM_APP_URL, data)

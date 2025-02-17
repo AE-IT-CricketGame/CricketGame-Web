@@ -139,8 +139,9 @@ const MatchSelectionPage = () => {
       if (result.isConfirmed) {
         const mobile = localStorage.getItem("mycricq-mobile");
         const serverRef = localStorage.getItem("mycricq-userRef");
+        const tag = localStorage.getItem("mycricq-tag");
 
-        await userUnsubscribeFromApp(mobile, serverRef)
+        await userUnsubscribeFromApp(mobile, serverRef, tag)
           .then(() => {
             localStorage.removeItem("mycricq-username");
             localStorage.removeItem("mycricq-mobile");
