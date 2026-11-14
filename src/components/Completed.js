@@ -64,8 +64,8 @@ function Completed({ match }) {
             ? Number(data?.attributes?.points) + Number(matchData.score)
             : Number(matchData.score)
         }/${matchData.wickets}`,
-        matchData.id,
-        data ? data.id : null
+        matchData.documentId,
+        data ? data.documentId : null
       ).then((res) => {
         if (!data) {
           console.log("USER CREATED");
@@ -96,7 +96,7 @@ function Completed({ match }) {
   };
 
   const getLeaderBoardById = async () => {
-    getLeaderBoard(match.id).then((res) => {
+    getLeaderBoard(match.documentId).then((res) => {
       console.log("res", res.data);
       const data = res.data.attributes.leaderboards.data?.sort(function (a, b) {
         return b.attributes.points - a.attributes.points;
