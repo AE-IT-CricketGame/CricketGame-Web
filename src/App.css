@@ -35,13 +35,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   /* backdrop-filter: brightness(80%) blur(1px); */
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  /* Preserve aspet ratio */
-  min-width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -54,13 +49,14 @@ body::before {
 }
 
 .match-card {
-  width: 400px;
-  height: 265;
+  width: 100%;
+  max-width: 400px;
 }
 
 .card-list {
-  margin-left: 10px;
-  margin-top: 20px;
+  margin: 20px auto 0;
+  width: 100%;
+  max-width: 400px;
 }
 
 .card-list-list {
@@ -153,9 +149,6 @@ body::before {
     margin-top: 5px !important;
     width: 150px !important;
   }
-  .match-card {
-    width: 310px;
-  }
 
   .award-animation {
     margin-top: 5px !important;
@@ -168,14 +161,6 @@ body::before {
 }
 
 @media (max-height: 900px) {
-  .card-list {
-    margin-left: 40px;
-  }
-
-  .match-card {
-    width: 315px;
-  }
-
   .award-animation {
     height: 200px;
   }
@@ -303,30 +288,6 @@ body::before {
   color: #192130;
 }
 
-@media (max-width: 550px) {
-  .card-list {
-    margin-left: 60px;
-  }
-}
-
-@media (max-width: 450px) {
-  .card-list {
-    margin-left: 32px;
-  }
-}
-
-@media (max-width: 400px) {
-  .card-list {
-    margin-left: 20px;
-  }
-}
-
-@media (max-width: 370px) {
-  .card-list {
-    margin-left: 10px;
-  }
-}
-
 @media (max-width: 600px) {
   body {
     background-image: url("./assets/images/bg-mmm-white.png");
@@ -339,10 +300,6 @@ body::before {
 
   .next-btn {
     margin-top: 15% !important;
-  }
-
-  .margin-issue {
-    margin-right: 100px;
   }
 
   .match-animation {

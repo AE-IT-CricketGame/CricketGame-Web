@@ -460,7 +460,7 @@ const MatchSelectionPage = () => {
           </div>
         </CModalBody>
       </CModal>
-      <div style={{ overflow: "auto" }} className="start-content animate__slow">
+      <div style={{ width: "100%", minWidth: 0 }} className="start-content animate__slow">
         <div className="top-heading" style={{ display: "flex", gap: 10 }}>
           <div style={{ textAlign: "start" }}>
             <CButton
@@ -488,7 +488,11 @@ const MatchSelectionPage = () => {
         <div className="card-list animate__animated animate__backInDown">
           <List className="card-list-list">
             {allMatches.map((match, key) => (
-              <ListItem component="div" disablePadding>
+              <ListItem
+                component="div"
+                disablePadding
+                sx={{ justifyContent: "center" }}
+              >
                 <Card
                   key={key}
                   sx={{
